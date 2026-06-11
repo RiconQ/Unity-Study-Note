@@ -1,6 +1,3 @@
-# Unity-Study-Note
-Unite Seoul 등 강연 영상을 정리하여 프로젝트를 통하여 테스트 하는 Repo
----
 # Unite Seoul / Unity 강연 영상 공부 방법
 
 > Unity 강연 영상을 단순 시청으로 끝내지 않고, 실제 프로젝트 개발에 연결하기 위한 공부 방식
