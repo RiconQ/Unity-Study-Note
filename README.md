@@ -1,17 +1,15 @@
-# Unite Seoul / Unity 강연 영상 공부 방법
+# Unity 강연 영상 공부 방법
 
-> Unity 강연 영상을 단순 시청으로 끝내지 않고, 실제 프로젝트 개발에 연결하기 위한 공부 방식
+> Unite Seoul, Unite, GDC, Unity Korea 같은 Unity 강연 영상을 단순 시청으로 끝내지 않고, 실제 개발 역량과 프로젝트 적용으로 연결하기 위한 공부 방식
 
 ---
 
 # 1. 공부 목적
 
-Unite Seoul, Unite, GDC, Unity Korea 같은 강연 영상은 일반 강의처럼 처음부터 끝까지 외우는 자료가 아니다.
-
-이런 영상은 다음 목적을 위해 본다.
+강연 영상은 다음 목적을 위해 본다.
 
 1. Unity 기능과 기술 흐름 파악
-2. 실제 게임 개발 사례 분석
+2. 실제 프로젝트의 문제 해결 방식 분석
 3. 내 프로젝트에 적용할 수 있는 아이디어 확보
 4. 나중에 다시 참고할 수 있는 기술 문서화
 5. 작은 실험을 통해 기술 자산으로 전환
@@ -19,14 +17,11 @@ Unite Seoul, Unite, GDC, Unity Korea 같은 강연 영상은 일반 강의처럼
 핵심 기준은 다음과 같다.
 
 > 영상을 보고 “알게 된 것”보다,
-> 내 Unity 프로젝트 안에서 “작게라도 실험해본 것”이 더 중요하다.
+> Unity 프로젝트 안에서 “작게라도 실험해본 것”이 더 중요하다.
 
 ---
 
 # 2. 영상 유형 분류
-
-모든 영상을 같은 방식으로 공부하면 비효율적이다.
-먼저 영상을 아래 유형으로 분류한다.
 
 | 유형         | 목적                                       | 공부 방식            |
 | ---------- | ---------------------------------------- | ---------------- |
@@ -41,25 +36,30 @@ Unite Seoul, Unite, GDC, Unity Korea 같은 강연 영상은 일반 강의처럼
 
 # 3. 시청 우선순위
 
-Project Shelter 같은 개인 Unity 프로젝트 기준으로는 아래 순서가 적절하다.
+## 1순위: 현재 프로젝트에 바로 연결되는 영상
 
-## 1순위: 바로 프로젝트에 연결되는 영상
+예시:
 
 * Player Controller
 * Camera / Cinemachine
 * Input System
 * Interaction System
 * Inventory
-* Placement System
 * UI
 * Save / Load
+* Scene Management
 * ScriptableObject 구조
+* Animation
+* Physics
+* AI / Navigation
 
-이 유형은 본 뒤 바로 코드나 씬에 적용한다.
+이 유형은 본 뒤 바로 코드, 씬, 시스템 구조에 적용할 수 있는지 판단한다.
 
 ---
 
-## 2순위: 그래픽스 기초
+## 2순위: 프로젝트 품질을 올리는 기술
+
+예시:
 
 * URP
 * Shader Graph
@@ -69,38 +69,45 @@ Project Shelter 같은 개인 Unity 프로젝트 기준으로는 아래 순서�
 * Toon Shading
 * NPR Rendering
 * VFX Graph
+* Animation Rigging
+* Audio System
+* UI Polish
 
-이 유형은 바로 본 프로젝트에 넣기보다, 작은 샘플 씬에서 먼저 실험한다.
+이 유형은 바로 본 프로젝트에 넣기보다, 작은 샘플 씬에서 먼저 실험하는 것이 좋다.
 
 ---
 
-## 3순위: 프로젝트 규모가 커질 때 필요한 것
+## 3순위: 프로젝트 규모가 커질 때 필요한 기술
+
+예시:
 
 * Addressables
+* Asset Bundle
 * Scene Streaming
 * Asset Management
-* Optimization
 * Build Pipeline
 * Memory Profiling
-* Asset Bundle
+* Performance Optimization
+* Localization
+* Platform Build Workflow
 
-이 유형은 지금 깊게 파기보다, 나중에 다시 볼 수 있게 정리해둔다.
+이 유형은 당장 깊게 파기보다, 나중에 다시 볼 수 있게 요약해둔다.
 
 ---
 
-## 4순위: 현재는 참고만 할 것
+## 4순위: 현재는 참고만 할 기술
+
+예시:
 
 * DOTS
 * ECS
 * Multiplayer
+* Dedicated Server
 * Large Open World
 * LiveOps
-* Server Architecture
 * Console Optimization
+* Mobile Advanced Optimization
 * 대규모 팀 파이프라인
-
-개인 프로젝트 초기 단계에서는 깊게 공부하지 않는다.
-필요 이상으로 빠지면 실제 개발 속도가 느려진다.
 
 ---
 
@@ -149,14 +156,16 @@ Project Shelter 같은 개인 Unity 프로젝트 기준으로는 아래 순서�
 
 | 영상 주제                | 실험 과제                                          |
 | -------------------- | ---------------------------------------------- |
-| URP Renderer Feature | Interactable 오브젝트 Outline 테스트                  |
-| Shader Graph         | 보호막, 스캔라인, 물 셰이더 제작                            |
-| Addressables         | 아이템 아이콘 / 프리팹 로딩 테스트                           |
+| URP Renderer Feature | 특정 오브젝트에 Outline 효과 적용 테스트                     |
+| Shader Graph         | 보호막, 스캔라인, 물, 디졸브 셰이더 제작                       |
+| Addressables         | 아이콘, 프리팹, 데이터 로딩 테스트                           |
 | Optimization         | Profiler로 Batches, SetPass Calls, Draw Call 비교 |
 | Cinemachine          | 카메라 충돌, FOV 보간, Shake 테스트                      |
 | Input System         | 키 리바인딩 구조 테스트                                  |
-| Inventory            | 순수 C# 인벤토리 로직 테스트                              |
+| UI System            | Tooltip, Popup, Inventory UI 구조 테스트            |
+| Save / Load          | JSON, ScriptableObject, Binary 방식 비교           |
 | Placement System     | 그리드 배치 / 자유 배치 비교                              |
+| Animation Rigging    | 캐릭터 손 위치 보정 테스트                                |
 
 ---
 
@@ -175,7 +184,7 @@ Project Shelter 같은 개인 Unity 프로젝트 기준으로는 아래 순서�
 
 * 발표자의 모든 문장
 * 이미 아는 기초 설명
-* 지금 프로젝트와 무관한 대규모 파이프라인
+* 현재 프로젝트와 무관한 대규모 파이프라인
 * 너무 고급이어서 당장 실험 불가능한 내용
 * 홍보성 기능 소개
 
@@ -225,8 +234,9 @@ Project Shelter 같은 개인 Unity 프로젝트 기준으로는 아래 순서�
 1. 평일에 본 영상 중 하나 선택
 2. 작은 테스트 씬 제작
 3. 구현 난이도 확인
-4. 프로젝트 적용 여부 판단
-5. 결과를 Markdown으로 정리
+4. 장단점 정리
+5. 현재 프로젝트 적용 여부 판단
+6. 결과를 Markdown으로 정리
 ```
 
 ---
@@ -245,6 +255,7 @@ Project Shelter 같은 개인 Unity 프로젝트 기준으로는 아래 순서�
 Unite_URP_Optimization.md
 Unite_Addressables_Workflow.md
 GDC_TechArt_Shader.md
+Unity_InputSystem_Workflow.md
 ```
 
 ---
@@ -256,9 +267,10 @@ Unity 프로젝트 내부 테스트 씬.
 예시:
 
 ```text
-Assets/_Project/Scenes/Tests/OutlineTest.unity
-Assets/_Project/Scenes/Tests/AddressablesTest.unity
-Assets/_Project/Scenes/Tests/ShaderGraphTest.unity
+Assets/_StudyLab/Scenes/OutlineTest.unity
+Assets/_StudyLab/Scenes/AddressablesTest.unity
+Assets/_StudyLab/Scenes/ShaderGraphTest.unity
+Assets/_StudyLab/Scenes/CinemachineTest.unity
 ```
 
 ---
@@ -274,40 +286,58 @@ URP_RendererFeature_Notes.md
 Addressables_Basic_Workflow.md
 ShaderGraph_NPR_Notes.md
 Cinemachine_Camera_Notes.md
+InputSystem_Rebinding_Notes.md
+SaveLoad_Architecture_Notes.md
 ```
 
 ---
 
-# 9. Project Shelter 기준 추천 분류
+# 9. 추천 학습 주제 분류
 
-## 현재 바로 필요한 주제
+## 현재 프로젝트에 바로 필요한 주제
 
-* Interaction System
-* Tooltip UI
-* Outline Highlight
-* Inventory
-* Item Database
-* Placement System
-* Save / Load
-* Camera Collision
-* Input Rebinding
+현재 만들고 있는 게임이나 앱에 직접 연결되는 기능을 우선한다.
+
+예시:
+
+* 캐릭터 조작
+* 카메라
+* 입력 시스템
+* 상호작용
+* UI
+* 인벤토리
+* 저장 / 불러오기
+* 씬 전환
+* 오브젝트 배치
+* 애니메이션
+* 기본 최적화
 
 ---
 
-## 곧 필요한 주제
+## 곧 필요해질 수 있는 주제
+
+프로젝트의 완성도와 확장성을 높이는 기술이다.
+
+예시:
 
 * URP 기초
 * Shader Graph
-* Toon Shading
-* NPR Lighting
+* Lighting
 * Post Processing
 * Addressables
 * Profiler 기초
 * ScriptableObject Architecture
+* Animation Rigging
+* Localization
+* Build Pipeline
 
 ---
 
 ## 나중에 볼 주제
+
+프로젝트 규모가 커졌을 때 필요한 고급 주제다.
+
+예시:
 
 * DOTS
 * ECS
@@ -316,6 +346,8 @@ Cinemachine_Camera_Notes.md
 * Large World Streaming
 * Advanced Build Pipeline
 * Console Optimization
+* Mobile Advanced Optimization
+* LiveOps
 
 ---
 
@@ -360,8 +392,10 @@ Cinemachine_Camera_Notes.md
 * 커스텀 렌더 파이프라인
 * 고급 GPU 최적화
 * 멀티플레이 서버 구조
+* 대규모 빌드 자동화
+* 라이브 서비스 운영 구조
 
-현재 목표는 지식 수집이 아니라 프로젝트 진척이다.
+현재 목표는 지식 수집 자체가 아니라 프로젝트 진척이다.
 
 ---
 
@@ -375,3 +409,9 @@ Cinemachine_Camera_Notes.md
 답이 있으면 실험 Todo로 바꾼다.
 실험까지 끝났다면 그때부터 실제 기술 자산이 된다.
 
+강연 영상 공부의 목표는 영상을 많이 보는 것이 아니다.
+목표는 다음 흐름을 만드는 것이다.
+
+```text
+강연 시청 → 핵심 정리 → 작은 실험 → 결과 기록 → 프로젝트 적용 판단
+```
